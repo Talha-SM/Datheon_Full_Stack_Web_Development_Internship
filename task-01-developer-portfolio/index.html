@@ -12,11 +12,38 @@
   <meta name="author" content="Talha Shakeel Malick">
   <meta name="theme-color" content="#0b1120">
 
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Talha Shakeel Malick | Software Developer"
+  >
+
+  <meta
+    property="og:description"
+    content="Explore software development projects involving ASP.NET Core MVC, C#, SQL Server, React Native, and modern web technologies."
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+
   <title>Talha Shakeel Malick | Developer Portfolio</title>
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/projects.css">
 
+  
+  <script
+   src="https://code.iconify.design/iconify-icon/3.0.4/iconify-icon.min.js"
+   defer>
+  </script>
   <script src="js/theme.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
@@ -44,6 +71,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#internship">Internship</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -79,83 +107,124 @@
 
   <main id="main-content">
 
+
     <!-- ================= HERO ================= -->
     <section class="hero section" id="home"
-             aria-labelledby="hero-heading">
-      <div class="container hero-layout">
+            aria-labelledby="hero-heading">
+    <div class="container hero-studio">
 
-        <div class="hero-content">
-          <p class="eyebrow hero-animate">
-            ASPIRING FULL STACK DEVELOPER
-          </p>
+        <!-- LEFT: INTRODUCTION -->
+        <div class="hero-intro">
 
-          <h1 id="hero-heading" class="hero-title hero-animate">
-            Hi, I'm <span class="accent">Talha.</span>
-            <span class="hero-title-secondary">
-              I build web applications.
-            </span>
-          </h1>
+        <p class="hero-kicker">
+            <span class="hero-kicker-line"></span>
+            HELLO, I'M TALHA
+        </p>
 
-          <p class="hero-description hero-animate">
+        <h1 class="studio-heading" id="hero-heading">
+            Software
+            <span>Developer<span class="accent">.</span></span>
+        </h1>
+
+        <p class="studio-description">
             I'm Talha Shakeel Malick, a Computer Science
-            undergraduate with hands-on experience developing
-            web and mobile applications using ASP.NET Core,
-            C#, SQL Server, and React Native.
-          </p>
+            undergraduate building practical web and mobile
+            applications with a focus on clean architecture,
+            functionality, and user experience.
+        </p>
 
-          <div class="hero-actions hero-animate">
-            <a class="btn btn-primary" href="#projects">
-              Explore My Work
+        <div class="studio-actions">
+
+            <a href="#projects" class="btn btn-primary studio-cta">
+            <span>Explore My Work</span>
+            <iconify-icon icon="lucide:arrow-up-right"
+                            aria-hidden="true"></iconify-icon>
             </a>
 
-            <a class="btn btn-outline" href="#contact">
-              Get in Touch
-            </a>
-          </div>
-
-          <div class="hero-socials">
-            <a
-              href="https://github.com/Talha-SM"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
+            <a href="mailto:talhamalick01@gmail.com"
+            class="studio-icon-btn"
+            aria-label="Send me an email">
+            <iconify-icon icon="lucide:mail"
+                            aria-hidden="true"></iconify-icon>
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/talha-malick"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
+            <a href="https://github.com/Talha-SM"
+            class="studio-icon-btn"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Visit my GitHub">
+            <iconify-icon icon="simple-icons:github"
+                            aria-hidden="true"></iconify-icon>
             </a>
-          </div>
+
+            <a href="https://www.linkedin.com/in/talha-malick"
+            class="studio-icon-btn"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Visit my LinkedIn">
+            <iconify-icon icon="simple-icons:linkedin"
+                            aria-hidden="true"></iconify-icon>
+            </a>
+
         </div>
 
-        
-        <div class="hero-visual">
-            <div class="profile-display">
-                <div class="profile-glow" aria-hidden="true"></div>
+        <!-- SMALL FEATURE PANEL -->
+        <div class="studio-focus">
+            <div class="studio-focus-icon">
+            <iconify-icon icon="lucide:code-2"
+                            aria-hidden="true"></iconify-icon>
+            </div>
 
-                <img
-                class="profile-image"
-                src="assets/images/profile.png"
-                alt="Portrait of Talha Shakeel Malick"
-                width="750"
-                height="1000"
-                fetchpriority="high"
-                >
-
-                <div class="floating-label">
-                <span class="status-dot" aria-hidden="true"></span>
-                Building & Learning
-                </div>
+            <div>
+            <span class="studio-focus-label">CURRENT FOCUS</span>
+            <strong>Full Stack Web Development</strong>
+            <p>Building, learning, and shipping projects.</p>
             </div>
         </div>
 
+        </div>
 
-      </div>
+        <!-- RIGHT: YOUR REAL PORTRAIT -->
+        <div class="studio-portrait">
+
+        <div class="studio-portrait-orbit"
+            aria-hidden="true"></div>
+
+        <div class="studio-photo-base"
+            aria-hidden="true"></div>
+
+        <img
+            src="assets/images/profile.png"
+            alt="Talha Shakeel Malick"
+            class="studio-profile-image"
+            width="750"
+            height="1000"
+            fetchpriority="high"
+        >
+
+        <div class="studio-tech studio-tech-html"
+            aria-hidden="true">
+            <iconify-icon icon="devicon:html5"></iconify-icon>
+        </div>
+
+        <div class="studio-tech studio-tech-css"
+            aria-hidden="true">
+            <iconify-icon icon="devicon:css3"></iconify-icon>
+        </div>
+
+        <div class="studio-tech studio-tech-js"
+            aria-hidden="true">
+            <iconify-icon icon="devicon:javascript"></iconify-icon>
+        </div>
+
+        <div class="studio-tech studio-tech-code"
+            aria-hidden="true">
+            <iconify-icon icon="devicon:vscode"></iconify-icon>
+        </div>
+
+        </div>
+
+    </div>
     </section>
+
 
     <!-- ================= ABOUT ================= -->
     <section class="section about-section" id="about"
@@ -248,11 +317,37 @@
           <article class="skill-card">
             <h3>Web Development</h3>
             <ul class="skill-tags">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>AJAX</li>
+
+            <li>
+                <iconify-icon icon="devicon:html5"
+                            aria-hidden="true"></iconify-icon>
+                HTML5
+            </li>
+
+            <li>
+                <iconify-icon icon="devicon:css3"
+                            aria-hidden="true"></iconify-icon>
+                CSS3
+            </li>
+
+            <li>
+                <iconify-icon icon="devicon:javascript"
+                            aria-hidden="true"></iconify-icon>
+                JavaScript
+            </li>
+
+            <li>
+                <iconify-icon icon="devicon:typescript"
+                            aria-hidden="true"></iconify-icon>
+                TypeScript
+            </li>
+
+            <li>
+                <iconify-icon icon="lucide:refresh-cw"
+                            aria-hidden="true"></iconify-icon>
+                AJAX
+            </li>
+
             </ul>
           </article>
 
@@ -298,9 +393,31 @@
           <article class="skill-card">
             <h3>Development Tools</h3>
             <ul class="skill-tags">
-              <li>Visual Studio</li>
-              <li>Git</li>
-              <li>GitHub</li>
+
+            <li>
+                <iconify-icon icon="devicon:vscode"
+                            aria-hidden="true"></iconify-icon>
+                VS Code
+            </li>
+
+            <li>
+                <iconify-icon icon="devicon:visualstudio"
+                            aria-hidden="true"></iconify-icon>
+                Visual Studio
+            </li>
+
+            <li>
+                <iconify-icon icon="devicon:git"
+                            aria-hidden="true"></iconify-icon>
+                Git
+            </li>
+
+            <li>
+                <iconify-icon icon="simple-icons:github"
+                            aria-hidden="true"></iconify-icon>
+                GitHub
+            </li>
+
             </ul>
           </article>
 
@@ -309,140 +426,236 @@
     </section>
 
     <!-- ================= PROJECTS ================= -->
-    <section class="section projects-section" id="projects"
-             aria-labelledby="projects-heading">
-      <div class="container">
+    
+    <section
+    class="section projects-section"
+    id="projects"
+    aria-labelledby="projects-heading"
+    >
+    <div class="container">
 
         <div class="section-header">
-          <p class="section-label">03 / SELECTED WORK</p>
-          <h2 id="projects-heading" class="section-title">
-            Featured Projects
-          </h2>
-          <p class="section-subtitle">
-            Selected academic and personal software
-            development projects.
-          </p>
+        <p class="section-label">03 / SELECTED WORK</p>
+
+        <h2 id="projects-heading" class="section-title">
+            Featured Projects<span class="accent">.</span>
+        </h2>
+
+        <p class="section-subtitle">
+            A selection of web and mobile applications I've
+            worked on, covering management systems,
+            business workflows, and mobile development.
+        </p>
         </div>
 
-        <div class="projects-grid">
+        <div class="showcase-grid">
 
-          <!-- Project 1 -->
-          <article class="project-card">
-            <div class="project-visual project-visual-one"
-                 aria-hidden="true">
-              <span>01</span>
+        <!-- WHEELZ -->
+        <article class="flip-card">
+            <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <button class="flip-front-trigger" type="button"
+                        aria-label="Flip WHEELZ project card"
+                        aria-expanded="false"
+                        aria-controls="wheelz-back">
+
+                <div class="flip-card-image car-theme">
+                    <img
+                    src="assets/images/projects/car-rental/dashboard.jpeg"
+                    alt="WHEELZ administration dashboard"
+                    loading="lazy">
+                </div>
+
+                <div class="flip-card-title">
+                    <span>01 / WEB APPLICATION</span>
+                    <h3>WHEELZ — Car Rental System</h3>
+                    <small>Click to explore ↗</small>
+                </div>
+                </button>
             </div>
 
-            <div class="project-content">
-              <p class="project-category">
-                Web Application
-              </p>
+            <div class="flip-card-back" id="wheelz-back" inert>
+                <span class="flip-category">01 / WEB APPLICATION</span>
+                <h3>WHEELZ — Car Rental System</h3>
 
-              <h3>Car Rental Management System</h3>
+                <p>
+                Vehicle rental management application with
+                administrative dashboards, booking workflows,
+                and role-based access.
+                </p>
 
-              <p>
-                A web-based system designed to manage vehicle
-                bookings, customers, rental contracts, and
-                business operations.
-              </p>
+                <div class="flip-tags">
+                <span>ASP.NET Core MVC</span>
+                <span>C#</span>
+                <span>SQL Server</span>
+                </div>
 
-              <ul class="project-highlights">
-                <li>Role-based access for admins, staff, and customers</li>
-                <li>Vehicle availability and booking management</li>
-                <li>SQL Server database and operational analytics</li>
-              </ul>
+                
+            <div class="flip-bottom">
+            <a
+                href="project-details.html?project=car-rental"
+                class="case-study-btn"
+                aria-label="View WHEELZ Car Rental case study"
+            >
+                <span class="case-study-btn-text">
+                View Case Study
+                <small>Project walkthrough</small>
+                </span>
 
-              <ul class="tech-tags">
-                <li>ASP.NET Core MVC</li>
-                <li>C#</li>
-                <li>SQL Server</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card">
-            <div class="project-visual project-visual-two"
-                 aria-hidden="true">
-              <span>02</span>
-            </div>
-
-            <div class="project-content">
-              <p class="project-category">
-                Business Management
-              </p>
-
-              <h3>Solar Trading System</h3>
-
-              <p>
-                A trading management application for
-                solar-related products, covering sales,
-                purchasing, and inventory operations.
-              </p>
-
-              <ul class="project-highlights">
-                <li>Layered application architecture</li>
-                <li>Repository Pattern for data access</li>
-                <li>Inventory, sales, and purchase management</li>
-              </ul>
-
-              <ul class="tech-tags">
-                <li>ASP.NET Core MVC</li>
-                <li>C#</li>
-                <li>SQL Server</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card">
-            <div class="project-visual project-visual-three"
-                 aria-hidden="true">
-              <span>03</span>
+                <span class="case-study-btn-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17 17 7M8 7h9v9"/>
+                </svg>
+                </span>
+            </a>
             </div>
 
-            <div class="project-content">
-              <p class="project-category">
-                Mobile Application
-              </p>
-
-              <h3>NGO Management Application</h3>
-
-              <p>
-                A mobile application supporting donors and
-                nonprofit organizations with donation
-                management and aid request workflows.
-              </p>
-
-              <ul class="project-highlights">
-                <li>Separate donor and NGO dashboards</li>
-                <li>Integration with ASP.NET Web API</li>
-                <li>Donations and aid request management</li>
-              </ul>
-
-              <ul class="tech-tags">
-                <li>React Native</li>
-                <li>ASP.NET Web API</li>
-                <li>Authentication</li>
-              </ul>
             </div>
-          </article>
+
+            </div>
+        </article>
+
+        <!-- SOLAR TRADING -->
+        <article class="flip-card">
+            <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <button class="flip-front-trigger" type="button"
+                        aria-label="Flip Solar Trading project card"
+                        aria-expanded="false"
+                        aria-controls="solar-back">
+
+                <div class="flip-card-image solar-theme">
+                    <img
+                    src="assets/images/projects/solar-trading/dashboard.jpeg"
+                    alt="Solar Trading dashboard"
+                    loading="lazy">
+                </div>
+
+                <div class="flip-card-title">
+                    <span>02 / BUSINESS MANAGEMENT</span>
+                    <h3>Solar Trading System</h3>
+                    <small>Click to explore ↗</small>
+                </div>
+                </button>
+            </div>
+
+            <div class="flip-card-back" id="solar-back" inert>
+                <span class="flip-category">02 / BUSINESS MANAGEMENT</span>
+                <h3>Solar Trading System</h3>
+
+                <p>
+                Business management platform covering
+                procurement, sales, inventory, invoices,
+                and payment workflows.
+                </p>
+
+                <div class="flip-tags">
+                <span>ASP.NET Core MVC</span>
+                <span>C#</span>
+                <span>SQL Server</span>
+                </div>          
+
+                <div class="flip-bottom">
+                <a
+                    href="project-details.html?project=solar-trading"
+                    class="case-study-btn"
+                    aria-label="View Solar Trading System case study"
+                >
+                    <span class="case-study-btn-text">
+                    View Case Study
+                    <small>Project walkthrough</small>
+                    </span>
+
+                    <span class="case-study-btn-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17 17 7M8 7h9v9"/>
+                    </svg>
+                    </span>
+                </a>
+                </div>
+
+            </div>
+
+            </div>
+        </article>
+
+        <!-- NGO CONNECT -->
+        <article class="flip-card">
+            <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <button class="flip-front-trigger" type="button"
+                        aria-label="Flip NGO Connect project card"
+                        aria-expanded="false"
+                        aria-controls="ngo-back">
+
+                <div class="flip-card-image ngo-theme">
+                    <img
+                    src="assets/images/projects/ngo-connect/dashboard.jpeg"
+                    alt="NGO Connect mobile application dashboard"
+                    loading="lazy">
+                </div>
+
+                <div class="flip-card-title">
+                    <span>03 / MOBILE APPLICATION</span>
+                    <h3>NGO Connect</h3>
+                    <small>Click to explore ↗</small>
+                </div>
+                </button>
+            </div>
+
+            <div class="flip-card-back" id="ngo-back" inert>
+                <span class="flip-category">03 / MOBILE APPLICATION</span>
+                <h3>NGO Connect</h3>
+
+                <p>
+                React Native application connecting donors
+                and NGOs through donations, aid requests,
+                and inventory tracking.
+                </p>
+
+                <div class="flip-tags">
+                <span>React Native</span>
+                <span>ASP.NET Web API</span>
+                </div>
+            
+                <div class="flip-bottom">
+                <a
+                    href="project-details.html?project=ngo-connect"
+                    class="case-study-btn"
+                    aria-label="View NGO Connect case study"
+                >
+                    <span class="case-study-btn-text">
+                    View Case Study
+                    <small>Project walkthrough</small>
+                    </span>
+
+                    <span class="case-study-btn-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17 17 7M8 7h9v9"/>
+                    </svg>
+                    </span>
+                </a>
+                </div>
+
+            </div>
+
+            </div>
+        </article>
 
         </div>
 
-        <div class="projects-footer">
-          <a
-            class="btn btn-outline"
-            href="https://github.com/Talha-SM"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Explore My GitHub
-          </a>
-        </div>
-
-      </div>
+    </div>
     </section>
+
 
     <!-- ================= INTERNSHIP ================= -->
     <section class="section internship-section" id="internship"
@@ -552,30 +765,74 @@
             Feel free to reach out.
           </p>
 
-          <a
-            class="btn btn-primary"
+        <div class="contact-actions">
+
+        <!-- EMAIL -->
+        <a
             href="mailto:talhamalick01@gmail.com"
-          >
-            Send Me an Email
-          </a>
+            class="contact-primary-btn"
+        >
+            <span class="contact-primary-icon">
+            <iconify-icon
+                icon="lucide:mail"
+                aria-hidden="true">
+            </iconify-icon>
+            </span>
 
-          <div class="contact-socials">
+            <span>Let's Connect</span>
+
+            <iconify-icon
+            icon="lucide:arrow-up-right"
+            class="contact-arrow"
+            aria-hidden="true">
+            </iconify-icon>
+        </a>
+
+        <!-- SOCIAL LINKS -->
+        <div class="contact-socials">
+
             <a
-              href="https://github.com/Talha-SM"
-              target="_blank"
-              rel="noopener noreferrer"
+            href="https://github.com/Talha-SM"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-social-link"
+            aria-label="Visit my GitHub profile"
             >
-              GitHub
+            <iconify-icon
+                icon="simple-icons:github"
+                aria-hidden="true">
+            </iconify-icon>
+
+            <span>GitHub</span>
+            <iconify-icon
+                icon="lucide:arrow-up-right"
+                class="social-arrow"
+                aria-hidden="true">
+            </iconify-icon>
             </a>
 
             <a
-              href="https://www.linkedin.com/in/talha-malick"
-              target="_blank"
-              rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/talha-malick"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-social-link"
+            aria-label="Visit my LinkedIn profile"
             >
-              LinkedIn
+            <iconify-icon
+                icon="simple-icons:linkedin"
+                aria-hidden="true">
+            </iconify-icon>
+
+            <span>LinkedIn</span>
+            <iconify-icon
+                icon="lucide:arrow-up-right"
+                class="social-arrow"
+                aria-hidden="true">
+            </iconify-icon>
             </a>
-          </div>
+
+        </div>
+        </div>
         </div>
 
       </div>
@@ -588,9 +845,15 @@
     <div class="container footer-content">
       <p>© 2026 Talha Shakeel Malick. All rights reserved.</p>
 
-      <a class="back-to-top" href="#top">
-        Back to Top ↑
-      </a>
+
+    <a class="back-to-top nav-action" href="#top"
+    aria-label="Back to top">
+    <span class="nav-action-icon">
+        <iconify-icon icon="lucide:arrow-up"
+                    aria-hidden="true"></iconify-icon>
+    </span>
+    <span>Back to top</span>
+    </a>
     </div>
   </footer>
 
