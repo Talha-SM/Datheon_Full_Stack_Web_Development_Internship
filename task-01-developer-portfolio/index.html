@@ -36,6 +36,11 @@
   <title>Talha Shakeel Malick | Developer Portfolio</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
+  </noscript>
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/projects.css">
 
@@ -192,11 +197,15 @@
             aria-hidden="true"></div>
 
         <img
-            src="assets/images/profile.png"
+            src="assets/images/profile-750.webp"
+            srcset="assets/images/profile-360.webp 360w,
+                    assets/images/profile-540.webp 540w,
+                    assets/images/profile-750.webp 750w"
+            sizes="(max-width: 520px) calc(100vw - 32px), (max-width: 850px) 490px, (max-width: 1100px) 42vw, 490px"
             alt="Talha Shakeel Malick"
             class="studio-profile-image"
-            width="750"
-            height="1000"
+            width="1086"
+            height="1448"
             fetchpriority="high"
         >
 
@@ -462,9 +471,9 @@
 
                 <div class="flip-card-image car-theme">
                     <img
-                    src="assets/images/projects/car-rental/dashboard.jpeg"
+                    src="assets/images/projects/car-rental/dashboard.card.webp"
                     alt="WHEELZ administration dashboard"
-                    loading="lazy">
+                    loading="lazy" decoding="async">
                 </div>
 
                 <div class="flip-card-title">
@@ -530,9 +539,9 @@
 
                 <div class="flip-card-image solar-theme">
                     <img
-                    src="assets/images/projects/solar-trading/dashboard.jpeg"
+                    src="assets/images/projects/solar-trading/dashboard.card.webp"
                     alt="Solar Trading dashboard"
-                    loading="lazy">
+                    loading="lazy" decoding="async">
                 </div>
 
                 <div class="flip-card-title">
@@ -597,9 +606,9 @@
 
                 <div class="flip-card-image ngo-theme">
                     <img
-                    src="assets/images/projects/ngo-connect/dashboard.jpeg"
+                    src="assets/images/projects/ngo-connect/dashboard.card.webp"
                     alt="NGO Connect mobile application dashboard"
-                    loading="lazy">
+                    loading="lazy" decoding="async">
                 </div>
 
                 <div class="flip-card-title">

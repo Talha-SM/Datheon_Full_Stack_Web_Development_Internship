@@ -103,9 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateSelection();
 
-    const nextImage = new Image();
-    nextImage.src = item.src;
-
     const display = () => {
       if (token !== transitionToken) return;
 
@@ -114,25 +111,18 @@ document.addEventListener("DOMContentLoaded", () => {
       stageImage.classList.remove("is-changing");
     };
 
-    if (reduceMotion.matches) {
+    if (!stageImage.hasAttribute("src") || reduceMotion.matches) {
       display();
     } else {
       stageImage.classList.add("is-changing");
-
-
-        if (nextImage.complete && nextImage.naturalWidth > 0) {
-        display();
-        } else {
-        nextImage.onload = display;
-
-        nextImage.onerror = () => {
-            if (token !== transitionToken) return;
-
-            stageImage.classList.remove("is-changing");
-            console.error("Failed to load project image:", item.src);
-        };
+      const nextImage = new Image();
+      nextImage.onload = display;
+      nextImage.onerror = () => {
+        if (token === transitionToken) {
+          display();
         }
-
+      };
+      nextImage.src = item.src;
     }
 
     if (dialog.open) updateLightbox();
@@ -150,9 +140,10 @@ document.addEventListener("DOMContentLoaded", () => {
     button.setAttribute("aria-label", `Show ${image.label}`);
 
     const img = document.createElement("img");
-    img.src = image.src;
     img.alt = "";
     img.loading = "lazy";
+    img.decoding = "async";
+    img.src = image.src.replace(/\.jpeg$/, ".thumb.webp");
 
     const name = document.createElement("span");
     name.textContent = image.label;

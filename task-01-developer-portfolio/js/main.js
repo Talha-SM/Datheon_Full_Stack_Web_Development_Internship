@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const revealElements = document.querySelectorAll(
     ".section-header, .about-grid, .skill-card, " +
-    ".project-card, .internship-card, " +
+    ".internship-card, " +
     ".education-card, .contact-content"
   );
 
@@ -175,17 +175,8 @@ document.addEventListener("DOMContentLoaded", () => {
       behavior: reducedMotion.matches ? "instant" : "smooth"
     });
   });
-});
 
-
-/* =========================================
-   RESPONSIVE 3D PROJECT CARD INTERACTION
-   Desktop: Hover
-   Touch: Tap
-   Keyboard: Focus / Escape
-========================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
+  /* ===== PROJECT CARDS ===== */
   const cards = document.querySelectorAll(".flip-card");
 
   const hoverDevice = window.matchMedia(
@@ -205,79 +196,51 @@ document.addEventListener("DOMContentLoaded", () => {
       front.setAttribute("aria-expanded", String(flipped));
 
       // Hide inactive face from keyboard navigation.
-      front.inert = flipped;
       back.inert = !flipped;
+      front.inert = flipped;
     }
 
-    // Desktop mouse hover
+    function closeCard() {
+      setFlipped(false);
+      front.focus({ preventScroll: true });
+    }
+
     card.addEventListener("pointerenter", (event) => {
-      if (hoverDevice.matches && event.pointerType === "mouse") {
+      if (hoverDevice.matches && event.pointerType === "mouse" &&
+          !card.contains(document.activeElement)) {
         setFlipped(true);
       }
     });
 
     card.addEventListener("pointerleave", (event) => {
-      if (hoverDevice.matches && event.pointerType === "mouse") {
-        if (!card.contains(document.activeElement)) {
-          setFlipped(false);
-        }
-      }
-    });
-
-    // Touchscreen: first tap flips.
-    front.addEventListener("click", () => {
-      if (!hoverDevice.matches) {
-        setFlipped(true);
-      }
-    });
-
-    // Touchscreen: tap anywhere on back except the CTA.
-    back.addEventListener("click", (event) => {
-      if (
-        !hoverDevice.matches &&
-        !event.target.closest(".case-study-btn")
-      ) {
+      if (event.pointerType === "mouse" && !card.contains(document.activeElement)) {
         setFlipped(false);
       }
     });
 
-    // Keyboard focus should reveal the back side.
-    card.addEventListener("focusin", (event) => {
-      if (
-        hoverDevice.matches &&
-        event.target === front &&
-        !card.classList.contains("is-flipped")
-      ) {
-        setFlipped(true);
-        caseStudyLink?.focus({ preventScroll: true });
+    // Button activation works with touch, Enter and Space.
+    front.addEventListener("click", () => {
+      setFlipped(true);
+      caseStudyLink?.focus({ preventScroll: true });
+    });
+
+    back.addEventListener("click", (event) => {
+      if (!event.target.closest(".case-study-btn") && !hoverDevice.matches) {
+        closeCard();
       }
     });
 
     card.addEventListener("focusout", (event) => {
       if (!card.contains(event.relatedTarget)) {
-        if (!card.matches(":hover")) {
-          setFlipped(false);
-        }
-      }
-    });
-
-    // Keyboard shortcut: Escape returns to front.
-    card.addEventListener("keydown", (event) => {
-      if (
-        event.key === "Escape" &&
-        card.classList.contains("is-flipped")
-      ) {
-        event.preventDefault();
         setFlipped(false);
-        front.focus();
       }
     });
 
-    // Do not allow link clicks to trigger card reversal.
-    caseStudyLink?.addEventListener("click", (event) => {
-      event.stopPropagation();
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !back.inert) {
+        event.preventDefault();
+        closeCard();
+      }
     });
-
-    setFlipped(false);
   });
 });
