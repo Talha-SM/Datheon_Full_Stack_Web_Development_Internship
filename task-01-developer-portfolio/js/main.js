@@ -176,3 +176,108 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+/* =========================================
+   RESPONSIVE 3D PROJECT CARD INTERACTION
+   Desktop: Hover
+   Touch: Tap
+   Keyboard: Focus / Escape
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".flip-card");
+
+  const hoverDevice = window.matchMedia(
+    "(hover: hover) and (pointer: fine)"
+  );
+
+  cards.forEach((card) => {
+    const front = card.querySelector(".flip-front-trigger");
+    const back = card.querySelector(".flip-card-back");
+    const caseStudyLink = card.querySelector(".case-study-btn");
+
+    if (!front || !back) return;
+
+    function setFlipped(flipped) {
+      card.classList.toggle("is-flipped", flipped);
+
+      front.setAttribute("aria-expanded", String(flipped));
+
+      // Hide inactive face from keyboard navigation.
+      front.inert = flipped;
+      back.inert = !flipped;
+    }
+
+    // Desktop mouse hover
+    card.addEventListener("pointerenter", (event) => {
+      if (hoverDevice.matches && event.pointerType === "mouse") {
+        setFlipped(true);
+      }
+    });
+
+    card.addEventListener("pointerleave", (event) => {
+      if (hoverDevice.matches && event.pointerType === "mouse") {
+        if (!card.contains(document.activeElement)) {
+          setFlipped(false);
+        }
+      }
+    });
+
+    // Touchscreen: first tap flips.
+    front.addEventListener("click", () => {
+      if (!hoverDevice.matches) {
+        setFlipped(true);
+      }
+    });
+
+    // Touchscreen: tap anywhere on back except the CTA.
+    back.addEventListener("click", (event) => {
+      if (
+        !hoverDevice.matches &&
+        !event.target.closest(".case-study-btn")
+      ) {
+        setFlipped(false);
+      }
+    });
+
+    // Keyboard focus should reveal the back side.
+    card.addEventListener("focusin", (event) => {
+      if (
+        hoverDevice.matches &&
+        event.target === front &&
+        !card.classList.contains("is-flipped")
+      ) {
+        setFlipped(true);
+        caseStudyLink?.focus({ preventScroll: true });
+      }
+    });
+
+    card.addEventListener("focusout", (event) => {
+      if (!card.contains(event.relatedTarget)) {
+        if (!card.matches(":hover")) {
+          setFlipped(false);
+        }
+      }
+    });
+
+    // Keyboard shortcut: Escape returns to front.
+    card.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        card.classList.contains("is-flipped")
+      ) {
+        event.preventDefault();
+        setFlipped(false);
+        front.focus();
+      }
+    });
+
+    // Do not allow link clicks to trigger card reversal.
+    caseStudyLink?.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+
+    setFlipped(false);
+  });
+});

@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Project Case Study | Talha Shakeel Malick</title>
+  <meta name="description"
+        content="Software development project case study by Talha Shakeel Malick.">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/projects.css">
+
+
+
+  <script
+    src="https://code.iconify.design/iconify-icon/3.0.4/iconify-icon.min.js"
+    defer>
+  </script>
+  <script src="js/theme.js" defer></script>
+  <script src="js/projects-data.js" defer></script>
+  <script src="js/project-details.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="logo" href="index.html#projects">
+        <span class="logo-mark">TM</span>
+        <span>Talha<span class="accent">.</span></span>
+      </a>
+
+      <div class="nav-actions">
+
+        <a href="index.html#projects"
+        class="case-back-link nav-action">
+
+        <span class="nav-action-icon">
+            <iconify-icon
+            icon="lucide:arrow-left"
+            aria-hidden="true">
+            </iconify-icon>
+        </span>
+
+        <span>All Projects</span>
+
+        </a>
+
+
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch theme"
+          aria-pressed="false"
+        >
+          <span class="theme-icon" aria-hidden="true">☀</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="case-hero section">
+      <div class="container">
+        <p class="section-label">PROJECT / CASE STUDY</p>
+
+        <span class="case-category" id="case-category"></span>
+
+        <h1 class="case-title" id="case-title"></h1>
+
+        <p class="case-description" id="case-description"></p>
+
+        <ul class="case-tech-list" id="case-tech"></ul>
+
+        <div class="case-cover">
+          <img id="case-cover-image"
+               src=""
+               alt=""
+               fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-overview">
+      <div class="container case-overview-grid">
+
+        <div>
+          <p class="section-label">01 / OVERVIEW</p>
+          <h2 class="section-title">About the Project</h2>
+          <p id="case-overview-text"></p>
+        </div>
+
+        <div class="case-feature-panel">
+          <h3>Key Features</h3>
+          <ul class="case-feature-list" id="case-features"></ul>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section class="section case-gallery-section"
+            aria-labelledby="gallery-heading">
+    <div class="container">
+
+        <div class="section-header">
+        <p class="section-label">02 / PROJECT WALKTHROUGH</p>
+        <h2 class="section-title" id="gallery-heading">
+            Inside the Project<span class="accent">.</span>
+        </h2>
+        <p class="section-subtitle">
+            Explore the application's actual screens and workflows.
+        </p>
+        </div>
+
+        <div class="project-showcase">
+
+        <div class="showcase-stage">
+            <div class="showcase-stage-top">
+            <span class="stage-indicator">
+                <span class="status-dot"></span>
+                PROJECT PREVIEW
+            </span>
+            <span id="stage-counter">01 / 01</span>
+            </div>
+
+            <div class="stage-image-area" id="stage-image-area">
+            <img id="stage-image" src="" alt="">
+            <button type="button" id="stage-expand"
+                    class="stage-expand"
+                    aria-label="Enlarge selected screenshot">
+                <span aria-hidden="true">⤢</span>
+                Expand
+            </button>
+            </div>
+
+            <div class="stage-bottom">
+            <div>
+                <span class="stage-eyebrow">CURRENT SCREEN</span>
+                <h3 id="stage-title">Project Overview</h3>
+            </div>
+            <div class="stage-controls">
+                <button type="button" id="stage-prev"
+                        aria-label="Previous screen">←</button>
+                <button type="button" id="stage-next"
+                        aria-label="Next screen">→</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="showcase-gallery-heading">
+            <span>EXPLORE SCREENS</span>
+            <span>SELECT TO PREVIEW</span>
+        </div>
+
+        <div class="showcase-thumbnails"
+            id="case-gallery"
+            aria-label="Project screenshot selector">
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+
+    <section class="section case-bottom">
+      <div class="container">
+        <h2 class="section-title">Explore More Projects</h2>
+        <div class="case-related" id="case-related"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Full-screen image viewer -->
+  <dialog class="gallery-lightbox" id="gallery-lightbox"
+          aria-label="Screenshot viewer">
+    <div class="lightbox-toolbar">
+      <span id="lightbox-counter"></span>
+      <button id="lightbox-close" type="button"
+              aria-label="Close screenshot viewer">✕</button>
+    </div>
+
+    <div class="lightbox-stage">
+      <button id="lightbox-prev" type="button"
+              aria-label="Previous screenshot">‹</button>
+
+      <img id="lightbox-image" alt="">
+
+      <button id="lightbox-next" type="button"
+              aria-label="Next screenshot">›</button>
+    </div>
+
+    <p id="lightbox-caption"></p>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Talha Shakeel Malick.</p>
+
+        <a href="index.html#projects"
+        class="case-back-link nav-action">
+
+        <span class="nav-action-icon">
+            <iconify-icon
+            icon="lucide:arrow-left"
+            aria-hidden="true">
+            </iconify-icon>
+        </span>
+
+        <span>All Projects</span>
+
+        </a>
+
+    </div>
+  </footer>
+</body>
+</html>
