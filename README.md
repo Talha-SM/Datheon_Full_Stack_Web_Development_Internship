@@ -17,7 +17,7 @@ as part of the Datheon Full Stack Web Development Internship.
 | # | Project | Technologies | Status |
 |---|---------|--------------|--------|
 | 01 | Developer Portfolio | HTML, CSS, JavaScript | Completed · Live Demo |
-| 02 | [TaskFlow Productivity Tracker](./task-02-productivity-tracker) | HTML, CSS, JavaScript, localStorage | Completed |
+| 02 | [TaskFlow Productivity Tracker](./task-02-productivity-tracker) | HTML, CSS, JavaScript, localStorage | Completed · [Live Demo](https://talha-taskflow.vercel.app/) |
 | 03 | Weather Dashboard | JavaScript, REST API | Planned |
 | 04 | E-Commerce Store | React, FakeStoreAPI | Planned |
 

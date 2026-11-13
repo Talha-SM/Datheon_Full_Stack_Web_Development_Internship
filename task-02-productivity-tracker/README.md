@@ -2,6 +2,8 @@
 
 Task 02 for the Datheon Full Stack Web Development Internship. A static HTML, CSS and vanilla JavaScript task manager.
 
+[Live demo](https://talha-taskflow.vercel.app/)
+
 ## Start locally
 
 Open this folder in VS Code. Launch index.html with Live Server, or run `py -m http.server 5502 --bind 127.0.0.1` and visit http://127.0.0.1:5502/. The second option needs Python 3.
