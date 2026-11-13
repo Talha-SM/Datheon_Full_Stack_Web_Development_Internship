@@ -16,7 +16,7 @@ as part of the Datheon Full Stack Web Development Internship.
 
 | # | Project | Technologies | Status |
 |---|---------|--------------|--------|
-| 01 | Developer Portfolio | HTML, CSS, JavaScript | Planned |
+| 01 | Developer Portfolio | HTML, CSS, JavaScript | Completed · Live Demo |
 | 02 | Productivity Tracker | JavaScript, localStorage | Planned |
 | 03 | Weather Dashboard | JavaScript, REST API | Planned |
 | 04 | E-Commerce Store | React, FakeStoreAPI | Planned |
@@ -38,8 +38,7 @@ source code, documentation, and setup instructions.
 
 ## Progress
 
-Work in progress. Project documentation, screenshots,
-and live demo links will be added as tasks are completed.
+Task 01 is complete and deployed on Vercel. [View the live developer portfolio](https://talha-malick-portfolio.vercel.app/).
 
 ## Author
 
