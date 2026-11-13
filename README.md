@@ -43,7 +43,7 @@ and live demo links will be added as tasks are completed.
 
 ## Author
 
-Your Name
+Talha Shakeel Malick
 
 GitHub: https://github.com/YOUR-USERNAME
 
