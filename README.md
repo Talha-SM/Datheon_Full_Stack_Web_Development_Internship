@@ -45,7 +45,7 @@ and live demo links will be added as tasks are completed.
 
 Talha Shakeel Malick
 
-GitHub: https://github.com/YOUR-USERNAME
+GitHub: https://github.com/Talha-SM
 
 ## Acknowledgment
 
